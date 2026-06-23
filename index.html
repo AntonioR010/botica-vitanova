@@ -3,32 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Botica Vitanova | Salud y Bienestar en Nazca</title>
+    <title>Botica Vitanova</title>
     <style>
         body { font-family: Arial, sans-serif; margin: 0; padding: 0; text-align: center; color: #333; }
-        header { background-color: #007bff; color: white; padding: 2rem 0; }
+        header { background-color: #007bff; color: white; padding: 1rem 0; }
         section { padding: 2rem; }
         .btn-whatsapp { display: inline-block; background-color: #25d366; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold; margin-top: 10px; }
         footer { background-color: #f4f4f4; padding: 1rem; font-size: 0.9rem; }
+        .header-container {
+            display: flex; /* Esto pone los elementos en fila */
+            align-items: center; /* Esto los alinea verticalmente al centro */
+            justify-content: center; /* Esto los centra horizontalmente */
+            gap: 10px; /* Esto añade un poco de espacio entre el logo y el texto */
+        }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>Botica Vitanova</h1>
-        <p>Tu salud es nuestra prioridad en Nazca</p>
+        <div class="header-container">
+            <img src="LOGO_OFICIAL.svg" alt="Logo" style="max-width: 180px;">
+            <div>
+                <h1>Botica Vitanova</h1>
+                <p>¡TU SALUD EN MANOS DE PROFESIONALES!</p>
+            </div>
+        </div>
     </header>
 
     <section id="servicios">
         <h2>Nuestros Servicios</h2>
         <p>Venta de medicamentos, productos de cuidado personal y atención farmacéutica.</p>
-        <p><strong>Horario:</strong> Lunes a Sábado de 8:00 AM a 10:00 PM</p>
+        <p><strong>Horario:</strong> LUNES A DOMINGO - 8:00 AM a 10:00 PM</p>
     </section>
 
     <section id="contacto">
         <h2>¿Necesitas una consulta?</h2>
         <p>Escríbenos directamente por WhatsApp para consultar stock o precios.</p>
-        <a href="https://wa.me/51999999999" class="btn-whatsapp">Contactar por WhatsApp</a>
     </section>
 
     <footer>
