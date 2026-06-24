@@ -77,3 +77,16 @@ footer {
 .logo-vitanova {
     max-width: 140px;
 }
+.mapa-container {
+    margin-top: 20px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    display: inline-block;
+}
+.icon-placeholder {
+    width: 300px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
