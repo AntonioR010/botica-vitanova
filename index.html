@@ -9,17 +9,9 @@
     <script src="script.js"></script>
 </head>
 <body>
-    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-
-    <nav class="menu-navigation">
-        <ul id="menu-lista">
-            <li><a href="index.html">Principal</a></li>
-            <li><a href="wiki.html">Aprendiendo con Vitanova</a></li>
-        </ul>
-    </nav>
-    
-
     <header>
+        <button class="menu-toggle" onclick="toggleMenu()"><img src="burger-icon.svg" class="burger-icon"></button>
+
         <div class="header-container">
             <img src="LOGO_OFICIAL.svg" alt="Logo" class="logo-vitanova">
             <div>
@@ -27,6 +19,13 @@
                 <p>¡TU SALUD EN MANOS DE PROFESIONALES!</p>
             </div>
         </div>
+
+        <nav class="navigation">
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="#">Vita Wiki</a></li>
+            </ul>
+        </nav>
     </header>
 
     <section style="padding: 0;">

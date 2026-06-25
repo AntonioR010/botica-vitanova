@@ -8,12 +8,14 @@ body {
 header { 
     background-color: #007bff; 
     color: white; 
-    padding: 1rem 0; 
+    padding: 1rem 0;
+    position: relative;
+    z-index: 10;
 }
 section { 
     padding: 2rem; 
 }
-        .btn-whatsapp { display: inline-block; background-color: #25d366; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold; margin-top: 10px; }
+
 footer { 
     background-color: #f4f4f4; 
     padding: 1rem; 
@@ -24,6 +26,7 @@ footer {
     align-items: center;
     justify-content: center;
     gap: 10px;
+    padding-top: 30px;
 }
 .btn-facebook {
     display: inline-block; 
@@ -115,80 +118,63 @@ footer {
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-/* --- MANTENEMOS TUS ESTILOS BASE --- */
-.menu-navigation {
-    background-color: #ffffff;
-    padding: 15px 0;
-    text-align: center;
-    border-bottom: 2px solid #e1e4e8;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-.menu-navigation ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.menu-navigation li {
-    display: inline-block;
-    margin: 0 20px;
-}
-
-.menu-navigation a {
-    text-decoration: none;
-    color: #007bff;
-    font-weight: bold;
-    font-size: 1.1rem;
-    padding: 5px 10px;
-    transition: color 0.3s;
-}
-
-.menu-navigation a:hover {
-    color: #28a745;
-}
-
-/* --- AJUSTES PARA EL MENÚ SUPERPUESTO (OVERLAY) --- */
-
 .menu-toggle {
-    display: none; /* Oculto en PC */
-    font-size: 30px;
-    cursor: pointer;
-    color: #007bff;
-    position: fixed; /* Lo fijamos en la esquina */
+    display: none;
+    position: absolute;
     top: 10px;
-    right: 20px;
-    z-index: 2000; /* Asegura que esté por encima de todo */
+    left: 10px;
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 12;
 }
 
+.nav-links.active {
+    display: flex !important;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+    padding: 0 10px;
+    margin: 0;
+    background-color: #004289;
+}
+.nav-links li a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Un fondo sutil */
+    color: #e0e0e0;
+}
 @media (max-width: 600px) {
-    .menu-toggle { 
-        display: block; 
-    }
-
-    /* Convertimos la lista en un panel que cubre la pantalla */
-    .menu-navigation ul {
-        display: none; 
-        position: fixed;
-        top: 0;
-        right: 0;
-        width: 100%; /* O puedes poner 250px si quieres que sea una barra lateral */
-        height: 100%;
-        background-color: #ffffff;
+    .menu-toggle { display: block; }
+    
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #004289;
         flex-direction: column;
-        justify-content: center; /* Centra los links en el medio de la pantalla */
-        align-items: center;
-        z-index: 1500;
+        z-index: 12;
     }
+    
+    .nav-links.active { 
+        display: flex !important; 
+    }
+}
 
-    .menu-navigation ul.activo {
-        display: flex;
-    }
-
-    .menu-navigation li {
-        display: block;
-        margin: 20px 0;
-    }
+.burger-icon {
+    width: 40px;
 }
