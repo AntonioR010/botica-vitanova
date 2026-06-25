@@ -78,15 +78,39 @@ footer {
     max-width: 140px;
 }
 .mapa-container {
-    margin-top: 20px;
+    margin: 20px auto;
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    display: inline-block;
+    
+    width: 90%;
+    max-width: 800px;
+}
+.mapa-container iframe {
+    width: 100%;
+    height: 450px;
+    display: block;
+    border: 0;
 }
 .icon-placeholder {
     width: 300px;
     height: auto;
     display: block;
     margin: 0 auto;
+}
+
+@media (max-width: 600px) {
+    .mapa-container iframe {
+        height: 300px;
+    }
+}
+
+#servicios, #contacto, #ubicacion, #feedback {
+    background-color: #f0fffe;
+    border: 1px solid #e1e4e8;
+    border-radius: 20px;
+    padding: 30px 10px;
+    margin: 20px auto;
+    max-width: 900px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
